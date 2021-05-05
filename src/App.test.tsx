@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('初期画面に投稿フォームが含まれている', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText('登録')).toBeInTheDocument();
 });
