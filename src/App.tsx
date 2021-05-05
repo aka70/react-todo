@@ -22,6 +22,7 @@ function App() {
     const nextid = idCounter + 1;
     setIdCounter(nextid);
     setTodo([...todos, { id: nextid, task: inputText, checked: false }]);
+    e.currentTarget["task"].value = '';
   };
 
   /**
